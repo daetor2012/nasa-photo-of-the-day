@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NasaCard from "./NasaCard";
+import { Row } from "reactstrap";
+
 
 export default function NasaInfo() {
     const [nasa, setNasa] = useState({});
@@ -17,7 +19,8 @@ export default function NasaInfo() {
     }, [])
     return (
         <div>
-            <NasaCard
+            <Row>
+                <NasaCard
                 key={nasa.title}
                 title={nasa.title}
                 explanation={nasa.explanation}
@@ -25,7 +28,43 @@ export default function NasaInfo() {
                 url={nasa.url}
                 copyright={nasa.copyright}
             />
-            
+                <NasaCard
+                title="Example title"
+                explanation="Example story text here"
+                date="10/24/2019"
+                copyright="David York"
+                url="https://source.unsplash.com/random"
+            />
+                <NasaCard
+                title="Example title"
+                explanation="Example story text here"
+                date="10/24/2019"
+                copyright="David York"
+                url="https://source.unsplash.com/random"
+            />
+                <NasaCard
+                title="Example title"
+                explanation="Example story text here"
+                date="10/24/2019"
+                copyright="David York"
+                url="https://source.unsplash.com/random"
+            />
+                <NasaCard
+                title="Example title"
+                explanation="Example story text here"
+                date="10/24/2019"
+                copyright="David York"
+                url="https://source.unsplash.com/random"
+            />
+                <NasaCard
+                title="Example title"
+                explanation="Example story text here"
+                date="10/24/2019"
+                copyright="David York"
+                url="https://source.unsplash.com/random"
+            />
+
+            </Row>
         </div>
     )
 };
